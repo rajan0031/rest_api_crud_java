@@ -21,7 +21,8 @@ public class MessageController {
         return repository.save(message);
     }
 
-    @GetMapping
+    // @GetMapping
+    @GetMapping(produces = "application/json")
     public List<Message> getAllMessages() {
         return repository.findAll();
     }
